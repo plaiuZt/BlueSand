@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8980B8B4-5074-41BF-A440-312D55CA8561}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Git.Framework.ORM</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="Git.Framework.DataTypes">
+      <HintPath>..\Git.Storage.Web\bin\Git.Framework.DataTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="Git.Framework.Cache">
+      <HintPath>..\Git.FrameWork.Cache\bin\Debug\Git.FrameWork.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Git.Framework.Io">
+      <HintPath>..\Git.FrameWork.Io\bin\Debug\Git.FrameWork.Io.dll</HintPath>
+    </Reference>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="BaseEntityExtension.cs" />
+    <Compile Include="ColumnType.cs" />
+    <Compile Include="IDbProcHelper.cs" />
+    <Compile Include="TableInfo.cs" />
+    <Compile Include="LambdaProvider.cs" />
+    <Compile Include="LambdaRoute.cs" />
+    <Compile Include="JoinType.cs" />
+    <Compile Include="EOperator.cs" />
+    <Compile Include="TableAttribute.cs" />
+    <Compile Include="LinkTableAttribute.cs" />
+    <Compile Include="LinkTablesAttribute.cs" />
+    <Compile Include="EOrderBy.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="ExpressionTypeHelper.cs" />
+    <Compile Include="DbType2SqlDbType.cs" />
+    <Compile Include="SQLException.cs" />
+    <Compile Include="ListenDbName.cs" />
+    <Compile Include="EntityTypeCache.cs" />
+    <Compile Include="MapType.cs" />
+    <Compile Include="IDbHelper.cs" />
+    <Compile Include="ECondition.cs" />
+    <Compile Include="JointType.cs" />
+    <Compile Include="ConvertECondition.cs" />
+    <Compile Include="DataMappingAttribute.cs" />
+  </ItemGroup>
+</Project>

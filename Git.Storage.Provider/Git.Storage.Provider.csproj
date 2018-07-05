@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Git.Storage.Provider</RootNamespace>
     <AssemblyName>Git.Storage.Provider</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,40 +30,11 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Git.Framework.Cache">
-      <HintPath>..\Lib\Git.Framework.Cache.dll</HintPath>
-    </Reference>
     <Reference Include="Git.Framework.DataTypes">
       <HintPath>..\Lib\Git.Framework.DataTypes.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Email">
-      <HintPath>..\Lib\Git.Framework.Email.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Encrypt">
-      <HintPath>..\Lib\Git.Framework.Encrypt.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Events">
-      <HintPath>..\Lib\Git.Framework.Events.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Io">
-      <HintPath>..\Lib\Git.Framework.Io.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Json">
-      <HintPath>..\Lib\Git.Framework.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Log">
-      <HintPath>..\Lib\Git.Framework.Log.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.MsSql">
-      <HintPath>..\Lib\Git.Framework.MsSql.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.ORM">
-      <HintPath>..\Lib\Git.Framework.ORM.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Resource">
-      <HintPath>..\Lib\Git.Framework.Resource.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -117,6 +90,46 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\Git.FrameWork.Cache\Git.FrameWork.Cache.csproj">
+      <Project>{f57cc45f-7565-479a-9ea6-06c1c0fad9fb}</Project>
+      <Name>Git.FrameWork.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Email\Git.FrameWork.Email.csproj">
+      <Project>{2093fbcc-9c81-46a8-9467-099c7a8646d0}</Project>
+      <Name>Git.FrameWork.Email</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Encrypt\Git.FrameWork.Encrypt.csproj">
+      <Project>{67736356-6bd0-4213-b217-30fdbb2f5096}</Project>
+      <Name>Git.FrameWork.Encrypt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Events\Git.FrameWork.Events.csproj">
+      <Project>{809525eb-544f-420a-8dc3-446b232c14eb}</Project>
+      <Name>Git.FrameWork.Events</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Io\Git.FrameWork.Io.csproj">
+      <Project>{393510da-3c6f-4f7d-8cc3-b35be3ac8bb6}</Project>
+      <Name>Git.FrameWork.Io</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Json\Git.FrameWork.Json.csproj">
+      <Project>{b03ba11e-fe4b-420a-8740-e89d9ce16ec1}</Project>
+      <Name>Git.FrameWork.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Log\Git.FrameWork.Log.csproj">
+      <Project>{b2c31256-ddd4-4f1c-adfd-a4fce2fd8ebe}</Project>
+      <Name>Git.FrameWork.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.MsSql\Git.FrameWork.MsSql.csproj">
+      <Project>{1b13c458-279a-4a4c-bf1a-2ae9f7524843}</Project>
+      <Name>Git.FrameWork.MsSql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.ORM\Git.FrameWork.ORM.csproj">
+      <Project>{8980b8b4-5074-41bf-a440-312d55ca8561}</Project>
+      <Name>Git.FrameWork.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Resource\Git.FrameWork.Resource.csproj">
+      <Project>{35a59024-6d2c-461f-ab1e-e022b1f715ac}</Project>
+      <Name>Git.FrameWork.Resource</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Git.Storage.Common\Git.Storage.Common.csproj">
       <Project>{7061be81-6a7b-4773-8bef-fad51a88d522}</Project>
       <Name>Git.Storage.Common</Name>

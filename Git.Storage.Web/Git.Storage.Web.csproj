@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Git.Storage.Web</RootNamespace>
     <AssemblyName>Git.Storage.Web</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -21,6 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +31,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,6 +40,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aspose.Cells">
@@ -53,41 +56,11 @@
       <HintPath>..\Lib\FastReport.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Git.Framework.Cache">
-      <HintPath>..\Lib\Git.Framework.Cache.dll</HintPath>
-    </Reference>
     <Reference Include="Git.Framework.Controller4">
       <HintPath>..\Lib\Git.Framework.Controller4.dll</HintPath>
     </Reference>
     <Reference Include="Git.Framework.DataTypes">
       <HintPath>..\Lib\Git.Framework.DataTypes.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Email">
-      <HintPath>..\Lib\Git.Framework.Email.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Encrypt">
-      <HintPath>..\Lib\Git.Framework.Encrypt.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Events">
-      <HintPath>..\Lib\Git.Framework.Events.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Io">
-      <HintPath>..\Lib\Git.Framework.Io.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Json">
-      <HintPath>..\Lib\Git.Framework.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Log">
-      <HintPath>..\Lib\Git.Framework.Log.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.MsSql">
-      <HintPath>..\Lib\Git.Framework.MsSql.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.ORM">
-      <HintPath>..\Lib\Git.Framework.ORM.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Resource">
-      <HintPath>..\Lib\Git.Framework.Resource.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
@@ -114,17 +87,15 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
@@ -180,6 +151,7 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
@@ -204,6 +176,8 @@
     <Compile Include="Areas\Bad\Controllers\ProductAjaxController.cs" />
     <Compile Include="Areas\Bad\Controllers\ProductController.cs" />
     <Compile Include="Areas\Bad\Controllers\ProductManagerAjaxController.cs" />
+    <Compile Include="Areas\Biz\BizAreaRegistration.cs" />
+    <Compile Include="Areas\Biz\Controllers\PurchaseInController.cs" />
     <Compile Include="Areas\Check\CheckAreaRegistration.cs" />
     <Compile Include="Areas\Check\Controllers\ProductAjaxController.cs" />
     <Compile Include="Areas\Check\Controllers\ProductController.cs" />
@@ -291,6 +265,7 @@
     <Content Include="Theme\css\themes\navygrey.css" />
     <Content Include="Theme\css\themes\red.css" />
     <Content Include="Theme\customer\Bad\Git.Storage.ProductBadOrder.js" />
+    <Content Include="Theme\customer\Biz\PurchaseIn\Git.Storage.Biz.PurchaseIn.js" />
     <Content Include="Theme\customer\Check\Git.Storage.CheckOrder.js" />
     <Content Include="Theme\customer\Department\Git.Storage.Depart.js" />
     <Content Include="Theme\customer\Git.Framework.Login.js" />
@@ -1743,6 +1718,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Biz\Models\" />
+    <Folder Include="Areas\Biz\Views\Shared\" />
     <Folder Include="Areas\Report\Views\Shared\" />
     <Folder Include="Theme\plugins\jquery-file-upload\server\php\files\thumbnail\" />
   </ItemGroup>
@@ -2010,6 +1987,8 @@
     <Content Include="Areas\Report\Views\Manager\Designer.cshtml" />
     <Content Include="Areas\Report\Views\Manager\Show.cshtml" />
     <Content Include="Areas\Report\Views\Manager\AddParam.cshtml" />
+    <Content Include="Areas\Biz\Views\Web.config" />
+    <Content Include="Areas\Biz\Views\PurchaseIn\List.cshtml" />
     <None Include="Configs\Data\Database.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -2110,6 +2089,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Configs\Pages\Report-PagesManage.config" />
+    <Content Include="Configs\Pages\PurchaseIn-PagesManage.config" />
     <None Include="Properties\PublishProfiles\WebSite.pubxml" />
     <Content Include="Views\Home\Welcome.cshtml" />
     <Content Include="Theme\plugins\Flexigrid\css\flexigrid.less" />
@@ -2130,6 +2110,46 @@
     <Content Include="Theme\content\report\出库单打印模板.frx" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Git.FrameWork.Cache\Git.FrameWork.Cache.csproj">
+      <Project>{f57cc45f-7565-479a-9ea6-06c1c0fad9fb}</Project>
+      <Name>Git.FrameWork.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Email\Git.FrameWork.Email.csproj">
+      <Project>{2093fbcc-9c81-46a8-9467-099c7a8646d0}</Project>
+      <Name>Git.FrameWork.Email</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Encrypt\Git.FrameWork.Encrypt.csproj">
+      <Project>{67736356-6bd0-4213-b217-30fdbb2f5096}</Project>
+      <Name>Git.FrameWork.Encrypt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Events\Git.FrameWork.Events.csproj">
+      <Project>{809525eb-544f-420a-8dc3-446b232c14eb}</Project>
+      <Name>Git.FrameWork.Events</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Io\Git.FrameWork.Io.csproj">
+      <Project>{393510da-3c6f-4f7d-8cc3-b35be3ac8bb6}</Project>
+      <Name>Git.FrameWork.Io</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Json\Git.FrameWork.Json.csproj">
+      <Project>{b03ba11e-fe4b-420a-8740-e89d9ce16ec1}</Project>
+      <Name>Git.FrameWork.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Log\Git.FrameWork.Log.csproj">
+      <Project>{b2c31256-ddd4-4f1c-adfd-a4fce2fd8ebe}</Project>
+      <Name>Git.FrameWork.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.MsSql\Git.FrameWork.MsSql.csproj">
+      <Project>{1b13c458-279a-4a4c-bf1a-2ae9f7524843}</Project>
+      <Name>Git.FrameWork.MsSql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.ORM\Git.FrameWork.ORM.csproj">
+      <Project>{8980b8b4-5074-41bf-a440-312d55ca8561}</Project>
+      <Name>Git.FrameWork.ORM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Resource\Git.FrameWork.Resource.csproj">
+      <Project>{35a59024-6d2c-461f-ab1e-e022b1f715ac}</Project>
+      <Name>Git.FrameWork.Resource</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Git.Storage.Common\Git.Storage.Common.csproj">
       <Project>{7061be81-6a7b-4773-8bef-fad51a88d522}</Project>
       <Name>Git.Storage.Common</Name>

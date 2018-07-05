@@ -1,0 +1,12 @@
+F:\BlueSand\Git.FrameWork.Email\bin\Debug\Git.FrameWork.Email.dll
+F:\BlueSand\Git.FrameWork.Email\bin\Debug\Git.FrameWork.Email.pdb
+F:\BlueSand\Git.FrameWork.Email\bin\Debug\Git.FrameWork.Resource.dll
+F:\BlueSand\Git.FrameWork.Email\bin\Debug\Git.FrameWork.Io.dll
+F:\BlueSand\Git.FrameWork.Email\bin\Debug\Git.FrameWork.Log.dll
+F:\BlueSand\Git.FrameWork.Email\bin\Debug\Git.Framework.DataTypes.dll
+F:\BlueSand\Git.FrameWork.Email\bin\Debug\Git.FrameWork.Resource.pdb
+F:\BlueSand\Git.FrameWork.Email\bin\Debug\Git.FrameWork.Io.pdb
+F:\BlueSand\Git.FrameWork.Email\bin\Debug\Git.FrameWork.Log.pdb
+F:\BlueSand\Git.FrameWork.Email\obj\Debug\Git.FrameWork.Email.csprojResolveAssemblyReference.cache
+F:\BlueSand\Git.FrameWork.Email\obj\Debug\Git.FrameWork.Email.dll
+F:\BlueSand\Git.FrameWork.Email\obj\Debug\Git.FrameWork.Email.pdb

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Git.Storage.DataAccess</RootNamespace>
     <AssemblyName>Git.Storage.DataAccess</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,20 +30,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Git.Framework.Io">
-      <HintPath>..\Lib\Git.Framework.Io.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.Log">
-      <HintPath>..\Lib\Git.Framework.Log.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.MsSql">
-      <HintPath>..\Lib\Git.Framework.MsSql.dll</HintPath>
-    </Reference>
-    <Reference Include="Git.Framework.ORM">
-      <HintPath>..\Lib\Git.Framework.ORM.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
       <HintPath>..\Lib\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
     </Reference>
@@ -131,6 +122,22 @@
     <Compile Include="Store\SupplierDataAccess.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Git.FrameWork.Io\Git.FrameWork.Io.csproj">
+      <Project>{393510da-3c6f-4f7d-8cc3-b35be3ac8bb6}</Project>
+      <Name>Git.FrameWork.Io</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.Log\Git.FrameWork.Log.csproj">
+      <Project>{b2c31256-ddd4-4f1c-adfd-a4fce2fd8ebe}</Project>
+      <Name>Git.FrameWork.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.MsSql\Git.FrameWork.MsSql.csproj">
+      <Project>{1b13c458-279a-4a4c-bf1a-2ae9f7524843}</Project>
+      <Name>Git.FrameWork.MsSql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.ORM\Git.FrameWork.ORM.csproj">
+      <Project>{8980b8b4-5074-41bf-a440-312d55ca8561}</Project>
+      <Name>Git.FrameWork.ORM</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Git.Storage.Common\Git.Storage.Common.csproj">
       <Project>{7061be81-6a7b-4773-8bef-fad51a88d522}</Project>
       <Name>Git.Storage.Common</Name>

@@ -155,7 +155,7 @@ namespace Git.Storage.Web.Lib
                         sbChild.AppendFormat("<ul class=\"sub\">");
                         bool flag = false;
                         bool exists = false;
-                        foreach (SysResourceEntity child in list.Where(a => a.ParentNum == parent.ResNum))
+                        foreach (SysResourceEntity child in list.Where(a => a.ParentNum == parent.ResNum).OrderBy(a => a.Sort))
                         {
                             flag = child.Url.ToLower() == this.Path.ToLower()
                                 || (!child.Children.IsNullOrEmpty() && child.Children.Exists(c => c.Url.ToLower() == this.Path.ToLower()))

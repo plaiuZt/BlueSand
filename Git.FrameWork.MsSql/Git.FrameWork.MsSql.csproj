@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B13C458-279A-4A4C-BF1A-2AE9F7524843}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Git.FrameWork.MsSql</RootNamespace>
+    <AssemblyName>Git.FrameWork.MsSql</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Git.Framework.DataTypes">
+      <HintPath>..\Git.Storage.Web\bin\Git.Framework.DataTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\Git.Storage.Web\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CaseInsensitiveStringEqualityComparer.cs" />
+    <Compile Include="ConfigurationHelper.cs" />
+    <Compile Include="DataAccess\ConfigDataCommandFileList.cs" />
+    <Compile Include="DataAccess\CustomDataCommand.cs" />
+    <Compile Include="DataAccess\DataAccessLogger.cs" />
+    <Compile Include="DataAccess\DataAccessSetting.cs" />
+    <Compile Include="DataAccess\DatabaseInstance.cs" />
+    <Compile Include="DataAccess\DatabaseList.cs" />
+    <Compile Include="DataAccess\DatabaseManager.cs" />
+    <Compile Include="DataAccess\DatabaseNotSpecifiedException.cs" />
+    <Compile Include="DataAccess\DataCommand.cs" />
+    <Compile Include="DataAccess\DataCommandFileLoadException.cs" />
+    <Compile Include="DataAccess\DataCommandFileNotSpecifiedException.cs" />
+    <Compile Include="DataAccess\DataCommandManager.cs" />
+    <Compile Include="DataAccess\dataOperations.cs" />
+    <Compile Include="DataAccess\dataOperationsDataCommand.cs" />
+    <Compile Include="DataAccess\dataOperationsDataCommandCommandType.cs" />
+    <Compile Include="DataAccess\dataOperationsDataCommandDatabase.cs" />
+    <Compile Include="DataAccess\dataOperationsDataCommandParameters.cs" />
+    <Compile Include="DataAccess\dataOperationsDataCommandParametersParam.cs" />
+    <Compile Include="DataAccess\dataOperationsDataCommandParametersParamDbType.cs" />
+    <Compile Include="DataAccess\dataOperationsDataCommandParametersParamDirection.cs" />
+    <Compile Include="DataAccess\DbCommandFactory.cs" />
+    <Compile Include="DataAccess\GitDatabase.cs" />
+    <Compile Include="DbHelper.cs" />
+    <Compile Include="DbParameterCollectionExtention.cs" />
+    <Compile Include="DbProcHelper.cs" />
+    <Compile Include="Entity\DataReaderEntitySource.cs" />
+    <Compile Include="Entity\DataRowEntitySource.cs" />
+    <Compile Include="Entity\EntityBuilder.cs" />
+    <Compile Include="Entity\EntityBuilderLogger.cs" />
+    <Compile Include="Entity\IEntityDataSource.cs" />
+    <Compile Include="Entity\ReferencedEntityAttribute.cs" />
+    <Compile Include="FileSystemChangeEventHandler.cs" />
+    <Compile Include="ObjectXmlSerializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Git.FrameWork.Log\Git.FrameWork.Log.csproj">
+      <Project>{b2c31256-ddd4-4f1c-adfd-a4fce2fd8ebe}</Project>
+      <Name>Git.FrameWork.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.FrameWork.ORM\Git.FrameWork.ORM.csproj">
+      <Project>{8980b8b4-5074-41bf-a440-312d55ca8561}</Project>
+      <Name>Git.FrameWork.ORM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,8 @@
+F:\BlueSand\Git.FrameWork.Log\obj\Debug\Git.FrameWork.Log.csprojResolveAssemblyReference.cache
+F:\BlueSand\Git.FrameWork.Log\bin\Debug\Git.FrameWork.Log.dll
+F:\BlueSand\Git.FrameWork.Log\bin\Debug\Git.FrameWork.Log.pdb
+F:\BlueSand\Git.FrameWork.Log\bin\Debug\Git.FrameWork.Io.dll
+F:\BlueSand\Git.FrameWork.Log\bin\Debug\Git.Framework.DataTypes.dll
+F:\BlueSand\Git.FrameWork.Log\bin\Debug\Git.FrameWork.Io.pdb
+F:\BlueSand\Git.FrameWork.Log\obj\Debug\Git.FrameWork.Log.dll
+F:\BlueSand\Git.FrameWork.Log\obj\Debug\Git.FrameWork.Log.pdb

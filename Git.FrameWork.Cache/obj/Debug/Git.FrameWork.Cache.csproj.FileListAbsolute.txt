@@ -1,0 +1,4 @@
+F:\BlueSand\Git.FrameWork.Cache\bin\Debug\Git.FrameWork.Cache.dll
+F:\BlueSand\Git.FrameWork.Cache\bin\Debug\Git.FrameWork.Cache.pdb
+F:\BlueSand\Git.FrameWork.Cache\obj\Debug\Git.FrameWork.Cache.dll
+F:\BlueSand\Git.FrameWork.Cache\obj\Debug\Git.FrameWork.Cache.pdb

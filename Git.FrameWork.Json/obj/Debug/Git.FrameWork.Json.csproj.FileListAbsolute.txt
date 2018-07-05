@@ -1,0 +1,4 @@
+F:\BlueSand\Git.FrameWork.Json\bin\Debug\Git.FrameWork.Json.dll
+F:\BlueSand\Git.FrameWork.Json\bin\Debug\Git.FrameWork.Json.pdb
+F:\BlueSand\Git.FrameWork.Json\obj\Debug\Git.FrameWork.Json.dll
+F:\BlueSand\Git.FrameWork.Json\obj\Debug\Git.FrameWork.Json.pdb

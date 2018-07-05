@@ -1,4 +1,0 @@
-F:\BlueSand\Git.FrameWork.Events\bin\Debug\Git.FrameWork.Events.dll
-F:\BlueSand\Git.FrameWork.Events\bin\Debug\Git.FrameWork.Events.pdb
-F:\BlueSand\Git.FrameWork.Events\obj\Debug\Git.FrameWork.Events.dll
-F:\BlueSand\Git.FrameWork.Events\obj\Debug\Git.FrameWork.Events.pdb

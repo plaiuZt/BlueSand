@@ -1,6 +1,0 @@
-F:\BlueSand\Git.FrameWork.Io\bin\Debug\Git.FrameWork.Io.dll
-F:\BlueSand\Git.FrameWork.Io\bin\Debug\Git.FrameWork.Io.pdb
-F:\BlueSand\Git.FrameWork.Io\bin\Debug\Git.Framework.DataTypes.dll
-F:\BlueSand\Git.FrameWork.Io\obj\Debug\Git.FrameWork.Io.dll
-F:\BlueSand\Git.FrameWork.Io\obj\Debug\Git.FrameWork.Io.pdb
-F:\BlueSand\Git.FrameWork.Io\obj\Debug\Git.FrameWork.Io.csprojResolveAssemblyReference.cache
